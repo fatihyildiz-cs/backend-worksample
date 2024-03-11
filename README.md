@@ -5,6 +5,7 @@ This project skeleton contains a basic Express setup one endpoint to create a us
 ## Scripts 
 
 Before running any scripts, run `nvm use` to set the correct node version.
+
 A (mongodb) database URL must be present in .env to establish connection.
 
 * `npm run start` starts the server
