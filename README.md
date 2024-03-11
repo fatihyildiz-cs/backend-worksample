@@ -3,9 +3,16 @@
 This project skeleton contains a basic Express setup one endpoint to create a user and one endpoint to fetch all users, as well as a basic empty unit test.
 
 ## Scripts 
-`npm start` starts the server
 
-`npm test` executes the tests
+Before running any scripts, run `nvm use` to set the correct node version.
+`npm run start` starts the server
+`npm run dev` starts the server in development mode with nodemon, which detects and applies changes automatically
+`npm run test` executes the tests
+`npm run test:coverage` executes the tests along with a coverage report
+
+Swagger documentation is available at the route `/api-docs`.
+
+A (mongodb) database URL must be present in .env to establish connection.
 
 ## Goal
 1. Adjust POST /users that it accepts a user and stores it in a database.
