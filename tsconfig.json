@@ -12,11 +12,16 @@
     "noImplicitAny": true,
     "target": "ES6",
     "types": [
-      "node"
-    ]
+      "node",
+      "mocha",
+      "chai",
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false
   },
   "include": [
     "./src/**/*.ts",
     "./test/**/*.ts"
-  ]
+  ],
 }
