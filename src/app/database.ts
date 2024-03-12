@@ -9,7 +9,7 @@ export default function connectDB() {
     mongoose.connect(url);
   } catch (err) {
     // this is a critical error, so we should exit the process and hope that the process manager will restart the app
-    throw new InternalError('Failed to connect to the database.', err);
+    throw new InternalError('Failed to connect to the database.', err, false);
   }
 
   const dbConnection = mongoose.connection;
@@ -19,6 +19,6 @@ export default function connectDB() {
   });
 
   dbConnection.on("error", (err) => {
-    throw new InternalError('Received error from the database connection.', err);
+    throw new InternalError('Received error from the database connection.', err, false);
   });
 }
