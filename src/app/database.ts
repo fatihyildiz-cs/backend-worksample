@@ -8,7 +8,7 @@ export default function connectDB() {
   try {
     mongoose.connect(url);
   } catch (err) {
-    // this is a critical error, so we should exit the process and hope that the process manager will restart the app
+    // This is a critical, non-operational error. So we should exit the process and hope that the process manager will restart the app
     throw new InternalError('Failed to connect to the database.', err, false);
   }
 
